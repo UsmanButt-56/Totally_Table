@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="70.516" height="69.417" viewBox="0 0 70.516 69.417">
+  <g id="Group_80" data-name="Group 80" transform="translate(-578.002 -377)">
+    <path id="pie-chart-3" d="M10.723,35H4A32.921,32.921,0,0,0,34.891,66.906V60.183C22.19,59.087,11.274,47.737,10.723,35Z" transform="translate(574.002 379.511)" fill="#f2f0ef"/>
+    <path id="pie-chart-3-2" data-name="pie-chart-3" d="M28.168,35h6.723A32.921,32.921,0,0,1,4,66.906V60.183C16.7,59.087,27.617,47.737,28.168,35Z" transform="translate(613.626 379.511)" fill="#f2f0ef"/>
+    <path id="pie-chart-3-3" data-name="pie-chart-3" d="M6.723,0H0A32.921,32.921,0,0,0,30.891,31.906V25.183C18.19,24.087,7.274,12.737,6.723,0Z" transform="translate(609.908 377) rotate(90)" fill="#f2f0ef"/>
+    <path id="pie-chart-3-4" data-name="pie-chart-3" d="M6.723,31.906H0A32.921,32.921,0,0,1,30.891,0V6.723C18.19,7.819,7.274,19.17,6.723,31.906Z" transform="translate(648.518 377) rotate(90)" fill="#e78530"/>
+  </g>
+</svg>

@@ -11,7 +11,7 @@ function Navbar() {
     setIsDropdownOpen(!isDropdownOpen)
   }
   return (
-    <div className='w-full h-[117px] md:h-[181px] bg-[#0D2539] fixed'>
+    <div className='w-full h-[117px] md:h-[181px] bg-[#0D2539] fixed z-50'>
       <div className='w-11/12 mx-auto h-full flex justify-between items-center'>
         {/* First Slot */}
 
