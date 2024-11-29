@@ -1,6 +1,7 @@
-import React from 'react'
+import React from 'react';
 import Navbar from '../../Components/Navbar/Navbar';
 import Search from '../../Pages/Conventions/Search/Search';
+import Event from '../../Pages/Conventions/Event/Event';
 
 function Convention_Layout() {
     return (
@@ -8,6 +9,7 @@ function Convention_Layout() {
             <Navbar />
             <div className="flex w-11/12 flex-col pt-40 md:pt-[230px] mx-auto">
                 <Search />
+                <Event />
             </div>
         </div>
     )
