@@ -10,7 +10,8 @@ import Convention_Layout from '../Layout/Convention_Layout/Convention_Layout';
 import Event_Layout from '../Layout/Event_Layout/Event_Layout';
 import OpenEvent from '../Pages/Conventions/OpenEvent/OpenEvent';
 import Friends from '../Pages/Friends/Friends';
-
+import Profile from '../Pages/Profile/Profile';
+import Settings from '../Pages/Settings/Settings';
 function Routing() {
     return (
         <>
@@ -20,16 +21,15 @@ function Routing() {
                         <Route path="/" element={<Home />} />
                         <Route path="/home/complete" element={<Completeprofile />} />
                         <Route path="/activity" element={<Activity />} />
-                        <Route path="/friends" element={<Friends/>} />
-                        <Route path="/profile" element={<h2>Conventions</h2>} />
-                        <Route path="/settings" element={<h2>Settings</h2>} />
+                        <Route path="/friends" element={<Friends />} />
+                        <Route path="/profile" element={<Profile />} />
+                        <Route path="/settings" element={<Settings />} />
                         {/* Catch all routes */}
                     </Route>
 
                     <Route path="*" element={<Not_Found />} />
 
                     <Route path="/conventions" element={<Convention_Layout />}>
-                        {/* <Route path="/conventions" element={<></>} /> */}
                     </Route>
 
                     <Route path="" element={<Event_Layout/>}>

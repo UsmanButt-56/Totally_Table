@@ -15,8 +15,6 @@ function Friends() {
     return (
         <>
             <Grids listed={listed} showFriendsData={showFriendsData} isListSelected={onButton} />
-            {/* <Friends_Data /> */}
-            {/* <List /> */}
             {
                 onButton ?  <List /> : <Friends_Data />
             }

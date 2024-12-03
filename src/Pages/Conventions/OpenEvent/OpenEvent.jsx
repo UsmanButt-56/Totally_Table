@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState , useEffect} from 'react'
 import mic from '../../../assets/mic.svg';
 import calendar from '../../../assets/calendar.svg';
 import map from '../../../assets/map.svg';
@@ -11,10 +11,26 @@ function OpenEvent() {
     if (!event) {
         return <div>No event selected!</div>;
     }
-    // else
-    // {
-    //     console.log(event.link);
-    // }
+
+    useEffect(() => {
+        const fetchEvents = async () => {
+            try {
+                const response = await fetch('http://localhost:5000/events');
+                const result = await response.json();
+                console.log(result);
+                if (Array.isArray(result.data)) {
+                    setEvents(result.data); // Only set if data is an array
+                } else {
+                    console.error("Expected an array, but received:", data);
+                }
+            } catch (error) {
+                console.error("Error is ", error);
+            }
+        }
+        fetchEvents();
+    }, []);
+    
+    
     return (
         <div className="bg-[#102F47] min-h-screen">
             <div className="w-11/12 mx-auto">
@@ -22,12 +38,12 @@ function OpenEvent() {
                     <div className='flex flex-col xl:w-[950px] 2xl:w-[1050px]'>
                         <div className=''>
                             <span className='font-normal text-[35px] md:text-[60px] leading-[40px] md:leading-[108px] font-palanquin-dark text-white'>
-                                {event.name}
+                                {event.title}
                             </span>
                             <br />
 
                             <div className="mt-4">
-                                {event.desc.map((line, index) => (
+                                {event.description?.map((line, index) => (
                                     <p
                                         key={index}
                                         className="font-normal text-[18px] md:text-[24px] md:leading-[30px] font-mulish text-white opacity-100 mb-4"
@@ -62,7 +78,7 @@ function OpenEvent() {
                                     <img src={calendar} alt="" />
                                 </div>
                                 <div className='font-normal text-[18px] md:text-[26px] md:leading-[33px] font-mulish text-white opacity-100'>
-                                    <span>{event.calendars}</span>
+                                    <span>{event.date}</span>
                                 </div>
                             </div>
                             <div className='flex items-center gap-x-[12px] md:gap-x-[22px]'>
@@ -72,17 +88,7 @@ function OpenEvent() {
                                 <div className='font-normal text-[18px] md:text-[26px] md:leading-[33px] font-mulish text-white opacity-100'>
                                     <span>{event.link}</span>
                                 </div>
-                                {/* <a
-                                    href={event.link}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-blue-400 underline"
-                                >
-                                    {event.link}
-                                </a> */}
                             </div>
-
-
                         </div>
 
                     </div>
