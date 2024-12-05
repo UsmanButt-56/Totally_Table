@@ -5,10 +5,16 @@ import bell from '../../assets/bell.svg';
 import arrow from '../../assets/arrow.svg';
 import { FaSearch } from "react-icons/fa";
 import person from '../../assets/person.png';
+import { useNavigate } from 'react-router-dom';
 function Navbar() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const toggledropdown = () => {
     setIsDropdownOpen(!isDropdownOpen)
+  }
+  const navigate = useNavigate();
+  const notification = () =>
+  {
+    navigate('/notification');
   }
   return (
     <div className='w-full h-[117px] md:h-[181px] bg-[#0D2539] fixed z-50'>
@@ -40,7 +46,7 @@ function Navbar() {
             </div>
           </div>
 
-          <div className='w-[92px] h-[92px] bg-[#102f47] relative rounded-full hidden lg:flex'>
+          <div className='w-[92px] h-[92px] bg-[#102f47] relative rounded-full hidden lg:flex' onClick={notification}>
             <div className='absolute inset-0 flex justify-center items-center'>
               <img src={bell} alt="" className='' />
             </div>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import mic from '../../../assets/mic.svg';
 import user from '../../../assets/usercircle.svg';
 import message from '../../../assets/message.svg';
@@ -43,6 +43,14 @@ function Friends_Data() {
             },
 
         ]
+        // useEffect(() => {
+        //     const friendsdata = async () => {
+        //     const response = await fetch('http://localhost:5000/events');
+        //     const result = await response.json();
+        //     console.log(result);
+        //    }
+        //    friendsdata();
+        // }, [])
     return (
         <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3 gap-x-[27px] gap-y-[29px]">
             {

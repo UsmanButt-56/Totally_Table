@@ -7,7 +7,7 @@ import star from '../../assets/star.svg';
 function Activity() {
   return (
     <div>
-      <ActivityFeed />
+      <ActivityFeed name="Your activity feed" dropdown="Show everything..." btn_name="Create post"/>
       <Feeds image1={mic} image2={mic} first="Daphne" second="is attending " third="UK Games Expo" time="Just now" desc_f="Daphne will attend UK Games Expo on Friday 31st May 2024 and Saturday 1st June 2024" desc_l="" comments="0" star={star} />
       <Feeds image1={mic} image2={mic} first="UK Games Expo " second="announced for 2024! " third="" time="" desc_f="Friday 31st May - Sunday 2nd June 2024." desc_l="Read the announcement" comments="0" star={filledstar} />
       <Feeds image1={mic} image2={""} first="Niles" second="updated their profile picture" third="" time="20 minutes ago" desc_f="" desc_l="" comments="0" star={filledstar} />

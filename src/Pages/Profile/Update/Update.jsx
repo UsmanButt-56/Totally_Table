@@ -4,6 +4,7 @@ import mic from '../../../assets/mic.svg';
 import Button from '../../../Components/Button/Button';
 import TextArea from '../../../Components/TextArea/TextArea';
 import BgButton from '../../../Components/Button/BgButton';
+//import map from '../../../assests/mic.svg';
 function Update() {
     return (
         <div className='bg-[#0D2539] 2xl:h-[1644px]'>
