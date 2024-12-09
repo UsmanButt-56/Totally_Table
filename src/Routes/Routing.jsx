@@ -16,6 +16,7 @@ import Footer_Layout from '../Layout/Footer_Layout/Footer_Layout';
 import Feedback from '../Pages/Footer_Pages/Feedback/Feedback';
 import Contact from '../Pages/Footer_Pages/Contact/Contact';
 import Notification from '../Pages/Notification/Notification';
+import Email from '../Pages/Message/Email';
 function Routing() {
     return (
         <>
@@ -45,10 +46,11 @@ function Routing() {
                          
                     </Route>
 
-                    <Route  element={<Footer_Layout/>}>
+                    <Route path="" element={<Footer_Layout/>}>
                        <Route path="/feedback" element={<Feedback />}></Route>
                        <Route path="/contact" element={<Contact />}></Route>
                        <Route path="/notification" element={<Notification />}></Route>
+                       <Route path="/message" element={<Email />}></Route>
                     </Route>
                     
                 </Routes>

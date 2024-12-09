@@ -1,10 +1,10 @@
 import React from "react";
 import Button from "../../../Components/Button/Button";
-import mic from "../../../assets/mic.svg";
-function Notify() {
+//import mic from "../../../assets/mic.svg";
+function Notify({ image, name, message }) {
   return (
     <>
-      <div className="bg-[#102F47] mb-3">
+      <div className="bg-[#102F47] mb-5">
         <div className="w-11/12 mx-auto">
           <div className="bg-[#0D2539] px-[15px] md:px-[30px]">
             <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center h-full lg:h-[126px] py-[5px] lg:py-0">
@@ -13,7 +13,7 @@ function Notify() {
                 <div className="ps-[12px] md:ps-[25px] pe-[10px] md:pe-[20px]">
                   <div className="w-[36px] sm:w-[46px] md:w-[56px] lg:w-[66px] h-[36px] sm:h-[46px] md:h-[56px] lg:h-[66px]">
                     <img
-                      src={mic}
+                      src={image}
                       alt=""
                       className="w-full h-full flex-shrink-0"
                     />
@@ -21,10 +21,8 @@ function Notify() {
                 </div>
                 <div>
                   <p className="font-normal text-[14px] sm:text-[18px] md:text-[22px] lg:text-[26px] lg:leading-[33px] font-mulish text-[#F3C15F]">
-                    Niles{" "}
-                    <span className="text-white">
-                      sent you a friend request
-                    </span>
+                    {name}
+                    <span className="text-white">{message}</span>
                   </p>
                 </div>
               </div>

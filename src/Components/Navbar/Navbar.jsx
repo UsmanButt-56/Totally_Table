@@ -16,6 +16,10 @@ function Navbar() {
   {
     navigate('/notification');
   }
+  const message = () =>
+  {
+    navigate('/message');
+  }
   return (
     <div className='w-full h-[117px] md:h-[181px] bg-[#0D2539] fixed z-50'>
       <div className='w-11/12 mx-auto h-full flex justify-between items-center'>
@@ -39,7 +43,7 @@ function Navbar() {
         </div>
         {/* 2nd Slot */}
         <div className='flex items-center gap-3'>
-          <div className='w-[92px] h-[92px] bg-[#102f47] rounded-full relative hidden lg:flex'>
+          <div className='w-[92px] h-[92px] bg-[#102f47] rounded-full relative hidden lg:flex' onClick={message}>
             <div className='absolute top-0 right-0 bg-[#C53A33] text-[26px] leading-[47px] font-palanquin-dark w-[27px] h-[27px] rounded-full font-semibold flex justify-center items-center text-white'>2</div>
             <div className='absolute flex justify-center items-center inset-0'>
               <img src={email} alt="" className='' />
