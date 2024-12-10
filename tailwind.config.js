@@ -9,10 +9,11 @@ export default {
       fontFamily: {
         mulish: ['Mulish', 'sans-serif'],
         'palanquin-dark': ['Palanquin Dark', 'sans-serif'],
+        'muli' : ['Muli', 'sans-serif'],
       },
       screens : {
         '3xl' : '1800px',
-        '4xl' : '1921px'
+        '4xl' : '1920px'
       }
     },
   },

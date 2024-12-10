@@ -1,2 +1,8 @@
 ![home](src/assets/images/home.png)
 ![After_home](src/assets/images/afterhome.png)
+![Sign_Up](src/assets/images/Sign_Up.png)
+![Activity](src/assets/images/Activity.png)
+![Friends_1](src/assets/images/Friends(01).png)
+![Friends_2](src/assets/images/Friend(02).png)
+![profile](src/assets/images/rofile.png)
+![setting](src/assets/images/Setting.png)

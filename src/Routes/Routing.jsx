@@ -17,13 +17,22 @@ import Feedback from '../Pages/Footer_Pages/Feedback/Feedback';
 import Contact from '../Pages/Footer_Pages/Contact/Contact';
 import Notification from '../Pages/Notification/Notification';
 import Email from '../Pages/Message/Email';
+import SignIn from '../Pages/SignIn/SignIn';
+import SignUp from '../Pages/SignUp/SignUp';
 function Routing() {
     return (
         <>
             <BrowserRouter>
                 <Routes>
+                    {/* Sign In */}
+                    <Route path="/" element={<SignIn />}></Route>
+
+                    {/* Sign Up */}
+                    <Route path="/sign_up" element={<SignUp />}></Route>
+                      
+                    {/*  */}
                     <Route element={<Layout />}>
-                        <Route path="/" element={<Home />} />
+                        <Route path="/home" element={<Home />} />
                         <Route path="/home/complete" element={<Completeprofile />} />
                         <Route path="/activity" element={<Activity />} />
                         <Route path="/friends" element={<Friends />} />
@@ -32,13 +41,14 @@ function Routing() {
                         {/* Catch all routes */}
                     </Route>
 
+                    {/* Not Found */}
                     <Route path="*" element={<Not_Found />} />
 
                     <Route path="/conventions" element={<Convention_Layout />}>
                      
                     </Route>
 
-                    <Route path="" element={<Event_Layout/>}>
+                    <Route element={<Event_Layout/>}>
                         <Route path = "/evented" element={<OpenEvent />}/> 
                     </Route>
 
@@ -46,7 +56,7 @@ function Routing() {
                          
                     </Route>
 
-                    <Route path="" element={<Footer_Layout/>}>
+                    <Route  element={<Footer_Layout/>}>
                        <Route path="/feedback" element={<Feedback />}></Route>
                        <Route path="/contact" element={<Contact />}></Route>
                        <Route path="/notification" element={<Notification />}></Route>
